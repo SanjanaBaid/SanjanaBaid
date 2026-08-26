@@ -29,7 +29,6 @@ def get_all_repos():
         page += 1
     return repos
 
-
 def get_stars_and_langs(repos):
     total_stars = 0
     lang_bytes = {}
@@ -40,7 +39,6 @@ def get_stars_and_langs(repos):
             for lang, count in r.json().items():
                 lang_bytes[lang] = lang_bytes.get(lang, 0) + count
     return total_stars, lang_bytes
-
 
 def get_commit_count(repos):
     total = 0
@@ -59,7 +57,6 @@ def get_commit_count(repos):
             total += 1
     return total
 
-
 def get_loc_additions_deletions(repos):
     additions, deletions = 0, 0
     for repo in repos:
@@ -72,7 +69,6 @@ def get_loc_additions_deletions(repos):
                     additions += week.get("a", 0)
                     deletions += week.get("d", 0)
     return additions, deletions
-
 
 def get_pr_and_contributed_repos(owned_repo_names):
     """Total PR count + distinct repos contributed to, via the Search API."""
@@ -109,7 +105,6 @@ def top_languages(lang_bytes, n=3):
     ranked = sorted(lang_bytes.items(), key=lambda x: x[1], reverse=True)
     return ", ".join(lang for lang, _ in ranked[:n])
 
-
 FONT = "'Cascadia Code','Fira Code','SFMono-Regular',Consolas,monospace"
 FONT_SIZE = 14
 LINE_HEIGHT = 20
@@ -141,11 +136,13 @@ def stat_row_svg(x, y, label, value, label_color, value_color="#e6edf3", dots_co
     ]
     return f'<text x="{x}" y="{y}" xml:space="preserve">{"".join(parts)}</text>'
 
+
 def header_row_svg(x, y, title, color, width=52):
     dashes = "-" * max(3, width - len(title) - 1)
     text = f"{title} {dashes}"
     ROW_WIDTHS.append(len(text))
     return f'<text x="{x}" y="{y}" fill="{color}" font-weight="bold" xml:space="preserve">{esc(text)}</text>'
+
 
 def build_svg(stats, ascii_art):
     ROW_WIDTHS.clear()
@@ -154,6 +151,7 @@ def build_svg(stats, ascii_art):
     n_art_lines = len(art_lines)
     art_width_ch = max(len(l) for l in art_lines)
     stats_x = art_x + int(art_width_ch * FONT_SIZE * 0.62) + 40
+
     rows = []
     y = art_y0
 
@@ -165,7 +163,7 @@ def build_svg(stats, ascii_art):
 
     rows.append(header_row_svg(stats_x, y, GITHUB_USERNAME, "#f2cc60"))
     y += LINE_HEIGHT
-    rows.append(stat_row_svg(stats_x, y, "OS", "Linux", col()))
+    rows.append(stat_row_svg(stats_x, y, "OS", "Windows", col()))
     y += LINE_HEIGHT
     rows.append(stat_row_svg(stats_x, y, "Languages.Programming", stats["prog_langs"], col()))
     y += LINE_HEIGHT
@@ -225,7 +223,6 @@ def build_svg(stats, ascii_art):
 </svg>'''
     return svg
 
-
 def main():
     user = get_user()
     repos = get_all_repos()
@@ -239,7 +236,7 @@ def main():
         ascii_art = f.read()
 
     stats = {
-        "prog_langs": "Python, JavaScript, C++",
+        "prog_langs": "Python, JavaScript, C++, C",
         "computer_langs": "HTML, CSS, SQL",
         "email_personal": "sanjanabaidcode@gmail.com",
         "email_work": "sanjana.vikram.24033@iitgoa.ac.in",
