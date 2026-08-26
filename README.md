@@ -1,36 +1,13 @@
-```
-...#@*@@%:...::...::........    .         
-...#@+@@%: ..::.:--.....::...  .. .  ..   
-...#%+@@#...:--  .         .. ..-=:.:.:=-:
-.. #%=@@#::-.     .:--:      ....+**+-.-=:
-.  ##=@@#:.    .+#%%%##+:     .:..-=-:::..
-   ##=@#=.    -*%@@@@%#*+-.    ..::::.:...
-  .##-%*-... -+++=+#%+=====.    :==-:::::.
-...#*-@*:    =***+*##-++===:    .::::::-::
-.  #*-@*.    +%@@%#%#+*%@#+::   ..--::::.:
-  .#+-%+    :+%@%#%%%#+*@#+-.    :+=..:. .
-  .#=:+:     .*%%%%@@%**#*-      -**- . .:
-   *=:--       =*#%@@@#==-       =+=:.  .-
-  .*-:+:       -#++++++=+=    ..:=:  .   -
-  .%=+#        .%@%%%#*##-     .++=:..   :
-.  ===+.        *@@@@%%%#.   .   .==-:.:..
-..             .=%@@@%%%#:            .   
- ........       :+%@@@#+-.         . .    
-::......... .    :*%%#.   .... .. .. ...  
-.:.................=*:........... .. ..
+<div align="center">
 
+![Sanjana Baid's GitHub stats](./assets/dark_mode.svg)
 
-SanjanaBaid ---------------------------------------
-OS: .............................. Linux
-Languages.Programming: ........... Python, JavaScript, TypeScript
+</div>
 
-Hobbies: .......................... YOUR_HOBBIES_HERE
-Contact: .......................... YOUR_CONTACT_HERE
-
-GitHub Stats -------------------------------------------
-Repos: ............................ 11
-Stars: ............................. 0
-Followers: .......................... 1
-Commits: ........................... 81
-Lines of Code: ...................... 21,976 (++), 1,674 (--)
-```
+<!--
+  This card is regenerated automatically by .github/workflows/update-readme.yml
+  (runs generate_readme.py daily + on every push), so repos, stars, commits,
+  pull requests, lines of code, followers and following always reflect live
+  GitHub data. Edit ascii_art.txt or generate_readme.py to change the look,
+  not this file.
+-->
